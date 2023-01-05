@@ -41,3 +41,25 @@ module.exports = {
     },
   ],
 }
+module.exports = {
+  siteMetadata: {
+    title: "Milport",
+    description: "A site made for the sole purpose of passing CMS development",
+    author: "@gatsbyjs",
+    siteUrl: "https://gatsbystarterdefaultsource.gatsbyjs.io/",
+  },
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        /*
+         * De volledige URL van je Headless WordPress site's GraphQL API.
+         * Voorbeeld : "https://www.example-site.com/graphql"
+         */
+        url: "http://milport-milirary-transport.local/graphql",
+      },
+    },
+  ],
+};

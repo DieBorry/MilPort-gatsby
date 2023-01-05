@@ -39,9 +39,8 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © {new Date().getFullYear()} &middot; Jellis Borry
+          <a href="https://portfolio-opdracht-jellis-borry.vercel.app/">Jellis</a>
         </footer>
       </div>
     </>

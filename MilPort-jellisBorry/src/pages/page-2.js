@@ -15,3 +15,26 @@ const SecondPage = () => (
 export const Head = () => <Seo title="Page two" />
 
 export default SecondPage
+
+//query Data {
+//   vehicles {
+//     edges {
+//       node {
+//         vehicleMeta {
+//           vehicleName
+//           vehicleImage {
+//             sourceUrl
+//           }
+//           vehicleDescription
+//           transportType
+//           maximumCargoCapacity
+//           maxRange
+//           maximumSpeed
+//           militaryBranch
+//           emptyWeight
+//           armor
+//         }
+//       }
+//     }
+//   }
+// }
