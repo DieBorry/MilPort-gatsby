@@ -58,7 +58,7 @@ module.exports = {
          * De volledige URL van je Headless WordPress site's GraphQL API.
          * Voorbeeld : "https://www.example-site.com/graphql"
          */
-        url: "http://milport-milirary-transport.local/graphql",
+        url: "http://milport-milirary-transport.local/___graphql",
       },
     },
   ],
