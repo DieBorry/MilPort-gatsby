@@ -39,8 +39,7 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Jellis Borry
-          <a href="https://portfolio-opdracht-jellis-borry.vercel.app/">Jellis</a>
+          <a href="https://portfolio-opdracht-jellis-borry.vercel.app/">© {new Date().getFullYear()} &middot; Jellis Borry</a>
         </footer>
       </div>
     </>

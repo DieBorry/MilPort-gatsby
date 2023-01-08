@@ -52,3 +52,10 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 80vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}

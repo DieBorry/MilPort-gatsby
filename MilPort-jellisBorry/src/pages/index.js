@@ -1,27 +1,47 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql,useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-// ||
+import VehicleCard from "../components/vehicleCard"
 
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+query MyQuery {
+  allWpVehicle {
+    edges {
+      node {
+        slug
+        vehicleMeta {
+          vehicleName
+          vehicleImage {
+            sourceUrl
+          }
+          vehicleDescription
+          transportType
+          maximumCargoCapacity
+          emptyWeight
+          maximumSpeed
+          maxRange
+          armor
+          militaryBranch
+        }
+      }
+    }
+  }
+}
 
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
+`)
+  return(
   <Layout>
-
+    <h2>Featured</h2>
+    <div className={styles.container}>
+      {data.allWpVehicle.edges.map((cVehicle,index) =>index<3&& <VehicleCard key={index} vehicle={cVehicle.node}/>)}
+    </div>
   </Layout>
-)
+)}
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage

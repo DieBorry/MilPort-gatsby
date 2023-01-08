@@ -15,16 +15,16 @@ const Header = ({ siteTitle }) => (
       to="/"
       style={{
         fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
+        textDecoration: `none`
       }}
     >
       {siteTitle}
     </Link>
     <nav>
-    <Link to="/">
+    <Link to="/" style={{padding:"1rem"}}>
       home
     </Link>
-    <Link to="/vehicleoverview">
+    <Link to="/vehicleoverview"style={{padding:"1rem"}}>
       vehicle overview
     </Link>
     </nav>
